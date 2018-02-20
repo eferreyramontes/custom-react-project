@@ -30,3 +30,19 @@
   font-size: 12px;
   margin: 5px 0 0 0;
 }
+
+.title {
+  font-size: 16px;
+}
+
+.description {
+  font-size: 13px;
+}
+
+.playlist_card {
+  height:220px;
+}
+
+.image {
+  height: 140px;
+}
