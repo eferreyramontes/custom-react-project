@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Styles from './media.css';
 
-class Media extends Component {
+class Media extends PureComponent {
 	state = {
 		author : 'Emmanuel Ferreyra'
 	}
@@ -27,11 +27,12 @@ class Media extends Component {
 				cursor:'pointer',
 				width:260,
 				border:'1px solid red',
+				minWidth: 100
 			}
 		}
 		return (
 			<div>
-				<div className="col s12 m2">
+				<div className="col s12 m4">
 					<div className="card blue-grey darken-1 playlist_card">
 						<div className="card-image">
 							<img className="image"
