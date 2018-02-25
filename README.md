@@ -133,3 +133,7 @@ Qué hace;
 * Separación de responsabilidades (Se parece a MVC, V para dumbs y C para smarts)
 * Mejorar la capacidad de reutilizar componentes
 
+### Eventos
+
+https://reactjs.org/docs/events.html
+
