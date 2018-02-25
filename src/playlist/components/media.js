@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 import Styles from './media.css';
 
 class Media extends PureComponent {
-	state = {
-		author : 'Emmanuel Ferreyra'
-	}
+	// state = {
+	// 	author : 'Emmanuel Ferreyra'
+	// }
 
-	constructor(props) {
-		super(props);
-		//this.handleClick = this.handleClick.bind(this);
-	}
+	// constructor(props) {
+	// 	super(props);
+	// 	//this.handleClick = this.handleClick.bind(this);
+	// }
 
 // Arrow functions heredan el contexto del contenedor
-	handleClick = (event) => {
-		//console.log(this.props.image)	
-		this.setState({
-			author: 'Ricardo'
-		})
-	}
+	// handleClick = (event) => {
+	// 	//console.log(this.props.image)	
+	// 	this.setState({
+	// 		author: 'Ricardo'
+	// 	})
+	// }
 	render(){
 		const styles = {
 			container: {
@@ -39,15 +39,12 @@ class Media extends PureComponent {
 								src={this.props.cover}
 								alt={this.props.title}
 							/>
-							<a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons icon">playlist_add</i></a>
+							<a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons icon" onClick={this.props.handleOpenModal}>playlist_add</i></a>
 						</div>
 						<div className="card-content white-text">
 							<span className="title">{this.props.title}</span>
 							<p className="description">{this.props.author}</p>
 						</div>
-{/*						<div className="card-action center-align">
-							<button type="submit" className="btn waves-effect waves-light center-align" onClick={this.handleClick}>Comprar</button>
-						</div>*/}
 					</div>
 				</div>
 				

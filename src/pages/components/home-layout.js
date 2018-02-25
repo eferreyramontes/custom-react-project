@@ -3,9 +3,11 @@ import './home-layout.css'
 
 function HomeLayout(props) {
 	return (
-		<section className="HomeLayout">
-			{props.children}
-		</section>
+		<div className="container">
+			<section className="HomeLayout">
+				{props.children}
+			</section>
+		</div>
 	)
 }
 

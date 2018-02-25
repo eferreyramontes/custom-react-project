@@ -26,7 +26,7 @@ function Category(props){
 							</tr>
 						</tbody>
 					</table>
-					<Playlist
+					<Playlist handleOpenModal={props.handleOpenModal}
 						playlist={playlist}
 					/>
 				</div>
