@@ -1,9 +1,9 @@
 import React from 'react';
 import Icon from './icon'
 
-function Pause(){
+function Pause(props){
 	return (
-		<Icon size={24}>
+		<Icon {...props}>
 			<path d="M4 4h10v24h-10zM18 4h10v24h-10z"></path>
 		</Icon>	
 	)
