@@ -42,7 +42,9 @@ class Home extends Component {
                     <HeaderContainer>
                         <Related/>      
                     </HeaderContainer>
-                    <VideoPlayer/>
+                    <VideoPlayer
+                        autoplay
+                    />
                     <Categories categories={this.props.data.categories}
                         handleOpenModal={this.handleOpenModal}
                     />
