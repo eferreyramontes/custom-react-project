@@ -8,6 +8,7 @@ import Controls from '../components/video-player-controls';
 import ProgressBar from '../components/progress-bar';
 import Spinner from '../components/spinner';
 import Volume from '../components/volume';
+import FullScreen from '../components/full-screen';
 
 class VideoPlayer extends Component {
   state = {
@@ -74,9 +75,21 @@ class VideoPlayer extends Component {
     this.video.muted = this.state.nonmute;
   }
 
+  handleFullScreen = event => {
+    if(!document.webkitIsFullScreen){
+      this.player.webkitRequestFullscreen()
+    } else {
+      document.webkitExitFullscreen();
+    }
+  }
+
+  setRef = element => {
+    this.player = element;
+  }
+
   render() {
     return ( 
-      <VideoPlayerLayout>
+      <VideoPlayerLayout setRef={this.setRef}>
         <Title title="Harcodeaded Video"/>
         <Controls>
           <PlayPause
@@ -96,6 +109,9 @@ class VideoPlayer extends Component {
             handleVolumeChange={this.handleVolumeChange}
             handleVolumeClick={this.handleVolumeClick}
             nonmute={this.state.nonmute}
+          />
+          <FullScreen 
+            handleFullScreen = {this.handleFullScreen}
           />
         </Controls>
         <Spinner
