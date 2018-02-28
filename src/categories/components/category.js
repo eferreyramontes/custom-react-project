@@ -16,16 +16,6 @@ function Category(props){
 				<div>
 					<h5>{title}</h5>
 					<h6>{description}</h6>
-					<table className='table' style={styles}>
-						<tbody>
-							<tr>
-								<td><Play/></td>
-								<td><Pause/></td>
-								<td><Volume/></td>
-								<td><FullScreen/></td>
-							</tr>
-						</tbody>
-					</table>
 					<Playlist handleOpenModal={props.handleOpenModal}
 						playlist={playlist}
 					/>

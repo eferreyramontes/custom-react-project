@@ -13,12 +13,10 @@ class Media extends PureComponent {
 	// }
 
 // Arrow functions heredan el contexto del contenedor
-	// handleClick = (event) => {
-	// 	//console.log(this.props.image)	
-	// 	this.setState({
-	// 		author: 'Ricardo'
-	// 	})
-	// }
+	handleClick = (event) => {
+		//console.log(this.props.image)	
+		this.props.openModal(this.props)
+	}
 	render(){
 		const styles = {
 			container: {
@@ -39,7 +37,7 @@ class Media extends PureComponent {
 								src={this.props.cover}
 								alt={this.props.title}
 							/>
-							<a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons icon" onClick={this.props.handleOpenModal}>playlist_add</i></a>
+							<a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons icon" onClick={this.handleClick}>playlist_add</i></a>
 						</div>
 						<div className="card-content white-text">
 							<span className="title">{this.props.title}</span>
